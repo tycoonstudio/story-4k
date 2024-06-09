@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+# Initial folder structure for frontend development
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```json
 
-## Available Scripts
+story4k/frontend/
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   └── ...
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   │   ├── logo.png
+│   │   │   └── banner.jpg
+│   │   ├── icons/
+│   │   │   ├── add-icon.svg
+│   │   │   └── delete-icon.svg
+│   │   ├── videos/
+│   │   │   └── ...
+│   │   └── fonts/
+│   │       └── ...
+│   │
+│   ├── components/
+│   │   ├── common/
+│   │   │   └── ...
+│   │   └── ...
+│   │
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── components/
+│   │   │   │   └── ...
+│   │   │   ├── _style.scss
+│   │   │   ├── homePage.jsx
+│   │   │   └── Home.test.jsx
+│   │   ├── Login/
+│   │   ├── Editor/
+│   │   ├── Dashboard/
+│   │   └── Profile/
+│   │
+│   ├── stylesheets/
+│   │   ├── css/
+│   │   │   ├── global-style.css
+│   │   │   └── global-style.css.map
+│   │   ├── min/
+│   │   │   ├── global-style.min.css
+│   │   │   └── global-style.min.css.map
+│   │   └── scss/
+│   │       ├── imports/
+│   │       │   └── ...
+│   │       └── global-style.scss
+│   ├── utils/
+│   │   └── ...
+│   ├── App.jsx
+│   ├── index.js
+│   └── reportWebVitals.js
+├── .env
+├── .gitignore
+├── package.json
+├── README.md
+└── ...
 
-In the project directory, you can run:
+```
 
-### `yarn start`
+# Live Sass Compiler
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This extension helps you compile and transpile your SASS/SCSS files to CSS in real-time.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `yarn test`
+- Live SASS & SCSS compile.
+- Customizable file location of exported CSS.
+- Customizable exported CSS style (`expanded`, `compressed`).
+- Customizable extension name (`css` or `.min.css`).
+- Quick status bar control.
+- Exclude specific folders by settings.
+- Autoprefix support (See settings section)
+- Reference a node module with a leading tilde e.g `~/nodePackage/theSass.scss`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage/Shortcuts
 
-### `yarn build`
+- Click to `Watch Sass` from the status bar to turn on the live compilation and then click to `Stop Watching Sass` from the status bar to turn off live compilation.
+- Press `F1` or `ctrl+shift+P` and enter `Live Sass: Watch Sass` to start watching and `Live Sass: Stop Watching Sass` to stop watching.
+- Press `F1` or `ctrl+shift+P` and enter `Live Sass: Compile Sass - Without Watch Mode` to compile one time compile the current file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Under the hood details
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This extension is actually quite simple in it's implementation. Partial files compile all files in your project and non-partials compile just themselves. By default partial files are those that start with an underscore " `_`" however, you can specify a location/glob pattern by changing the `liveSassCompile.settings.partialsList` setting (which defaults to `["/**/_*.s[ac]ss"]`)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `yarn eject`
+1. Open VSCode Editor and Press `ctrl+P`, type `ext install glenn2223.live-sass`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Our Open Source Commitment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The open source community is struggling Open source maintainers spends countless unpaid hours supporting those using their project, they need some support back This is why we have an Open Source Commitment.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Any monthly donations that we get - specifically referencing this project - will be shared with our dependencies (specified below). We support the packages that need it most, so we may not donate to all dependencies (often those developed/maintained by big enterprises). We can also only support the ones have a means of receiving donations.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Credits
 
-## Learn More
+This extension was created by [Glenn Marks](https://github.com/glenn2223).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This extension is licensed under the [MIT License](LICENSE).
 
-### Code Splitting
+### Extension Link
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass
 
-### Analyzing the Bundle Size
+### GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+https://glenn2223.github.io/vscode-live-sass-compiler/
 
-### Making a Progressive Web App
+### Stack Overflow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+https://stackoverflow.com/questions/tagged/live-sass-compiler?tab=Active
 
-### Advanced Configuration
+### Changelog
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+https://glenn2223.github.io/vscode-live-sass-compiler/CHANGELOG.html
 
-### Deployment
+### FAQs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+https://glenn2223.github.io/vscode-live-sass-compiler/FAQs
 
-### `yarn build` fails to minify
+### Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://glenn2223.github.io/vscode-live-sass-compiler/Docs
+
+### YouTube Quick Guide
+
+https://www.youtube.com/watch?v=...
+
+> **Note**: Before making any frontend modifications, make sure to install the Live Sass Compiler extension in VS Code and apply the following settings to your VS code `settings.json` file:
+
+```json
+{
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.watchOnLaunch": true,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css",
+      "savePathReplacementPairs": null
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "~/../min",
+      "savePathReplacementPairs": null
+    }
+  ]
+}
+```
