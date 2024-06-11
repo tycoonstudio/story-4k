@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"global-style.min.css"}
+{"version":3,"sources":["../scss/imports/base/_base.scss"],"names":[],"mappings":"AAAA,EACE,QAAA,CACA,SAAA,CACA,oBAAA,CACA,mBAAA,CACA,qBAAA","file":"global-style.min.css"}

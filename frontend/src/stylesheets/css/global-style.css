@@ -1,1 +1,7 @@
-/*# sourceMappingURL=global-style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: none;
+  box-sizing: border-box;
+}/*# sourceMappingURL=global-style.css.map */
