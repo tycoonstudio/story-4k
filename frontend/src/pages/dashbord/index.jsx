@@ -1,10 +1,14 @@
 import React from "react";
+import "./_style.scss";
+
+import Hero from "./components/hero";
+import Card from "./components/card";
 
 const dashbord = () => {
   return (
     <div>
-      <h1>Welcome to Story-4K</h1>
-      <p>This is the Home page.</p>
+      <Hero />
+      <Card />
     </div>
   );
 };

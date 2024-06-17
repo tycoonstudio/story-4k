@@ -1,0 +1,132 @@
+.hero-card-container {
+  margin-top: -6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+
+  .card-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    .feature-card {
+      height: 11rem;
+      width: 100%;
+      max-width: 23rem;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--bg-100);
+      border-radius: 0.8rem;
+      border: 1px solid var(--secondaryBg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: var(--transition-400);
+      position: relative;
+
+      @media (min-width: 600px) {
+        width: calc(50% - 1.5rem);
+        flex-direction: row;
+      }
+
+      @media (min-width: 900px) {
+        width: calc(33.333% - 1.5rem);
+      }
+
+      .grid {
+        margin-top: 10rem;
+        margin-right: 10rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition-400);
+
+        .blur {
+          transition: 600ms;
+        }
+      }
+
+      .feature-card-detail {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        @media (min-width: 600px) {
+          flex-direction: row;
+        }
+
+        .feature-card-image {
+          img {
+            height: 11rem;
+            width: 100%;
+            object-fit: cover;
+
+            filter: saturate(0);
+            transition: filter var(--transition-400);
+          }
+        }
+
+        .feature-card-text {
+          width: 100%;
+          padding: 0.8rem;
+          position: relative;
+          z-index: 1;
+
+          @media (min-width: 600px) {
+            width: 15rem;
+          }
+
+          h2 {
+            transition: color var(--transition-400);
+          }
+
+          p {
+            margin-top: 0.2rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      &:hover {
+        border: 1px solid var(--clr-gray-900);
+
+        .grid {
+          margin-top: -16rem;
+          margin-left: 10rem;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .blur {
+            height: 12rem;
+            width: 12rem;
+            background-color: var(--secondaryHi);
+            filter: blur(120px);
+            border-radius: 100px;
+            z-index: 0;
+            position: absolute;
+          }
+        }
+
+        .feature-card-image {
+          img {
+            filter: saturate(1);
+          }
+        }
+
+        .feature-card-text {
+          h2 {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}

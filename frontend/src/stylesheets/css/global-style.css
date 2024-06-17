@@ -1,7 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+:root {
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+  --clr-white-50: rgba(255, 255, 255, 0.04);
+  --clr-white-100: rgba(255, 255, 255, 0.06);
+  --clr-white-200: rgba(255, 255, 255, 0.08);
+  --clr-white-300: rgba(255, 255, 255, 0.16);
+  --clr-white-400: rgba(255, 255, 255, 0.24);
+  --clr-white-500: rgba(255, 255, 255, 0.36);
+  --clr-white-600: rgba(255, 255, 255, 0.48);
+  --clr-white-700: rgba(255, 255, 255, 0.64);
+  --clr-white-800: rgba(255, 255, 255, 0.8);
+  --clr-white-900: rgba(255, 255, 255, 0.92);
+  --clr-black-50: rgba(0, 0, 0, 0.04);
+  --clr-black-100: rgba(0, 0, 0, 0.06);
+  --clr-black-200: rgba(0, 0, 0, 0.08);
+  --clr-black-300: rgba(0, 0, 0, 0.16);
+  --clr-black-400: rgba(0, 0, 0, 0.24);
+  --clr-black-500: rgba(0, 0, 0, 0.36);
+  --clr-black-600: rgba(0, 0, 0, 0.48);
+  --clr-black-700: rgba(0, 0, 0, 0.64);
+  --clr-black-800: rgba(0, 0, 0, 0.8);
+  --clr-black-900: rgba(0, 0, 0, 0.92);
+  --clr-gray-50: #f7fafc;
+  --clr-gray-100: #edf2f7;
+  --clr-gray-200: #e2e8f0;
+  --clr-gray-300: #cbd5e0;
+  --clr-gray-400: #a0aec0;
+  --clr-gray-500: #718096;
+  --clr-gray-600: #4a5568;
+  --clr-gray-700: #2d3748;
+  --clr-gray-800: #1a202c;
+  --clr-gray-900: #171923;
+  --clr-red-50: #fff5f5;
+  --clr-red-100: #fed7d7;
+  --clr-red-200: #feb2b2;
+  --clr-red-300: #fc8181;
+  --clr-red-400: #f56565;
+  --clr-red-500: #e53e3e;
+  --clr-red-600: #c53030;
+  --clr-red-700: #9b2c2c;
+  --clr-red-800: #822727;
+  --clr-red-900: #63171b;
+  --background: linear-gradient(
+    81.02deg,
+    #fa5560 -23.47%,
+    #b14bf4 45.52%,
+    #4d91ff 114.8%
+  );
+  --clr-bg-100: #0e0e0f;
+  --primary-100: #171923;
+  --primary-200: #3d3f4b;
+  --primary-300: #9698a5;
+  --accent-100: #990000;
+  --accent-200: #ffa783;
+  --text-100: #ffffff;
+  --text-200: #e0e0e0;
+  --bg-1000: #0b0b0c;
+  --bg-100: #0e0e0f;
+  --bg-200: #121823;
+  --bg-300: #181f2f;
+  ---background: -webkit-linear-gradient(to right, #16222a, #3a6073);
+  ---background: linear-gradient(to right, #16222a, #3a6073);
+  --text: hsl(0, 0%, 99%);
+  --textDim: hsl(0, 0%, 60%);
+  --background: hsl(0, 0%, 7%);
+  --primary: hsl(155, 100%, 65%);
+  --primaryBg: hsla(155, 100%, 65%, 1%);
+  --primaryHi: hsla(155, 100%, 75%, 25%);
+  --primaryFg: hsl(155, 100%, 85%);
+  --secondary: hsl(156, 51%, 14%);
+  --secondaryFg: hsl(156, 51%, 75%);
+  --secondaryBg: hsla(156, 51%, 14%, 5%);
+  --secondaryHi: hsla(156, 51%, 30%, 50%);
+  --accent: hsl(155, 100%, 94%);
+  --accentBg: hsla(155, 100%, 94%, 1%);
+  --accentHi: hsla(155, 100%, 100%, 25%);
+}
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   text-transform: none;
   box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-1000);
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-200);
+}
+
+p {
+  color: rgba(196, 196, 196, 0.7607843137);
+}
+
+:root {
+  --transition-400: 400ms;
+  --transition-500: 500ms;
+  --transition-600: 600ms;
+  --transition-700: 700ms;
 }/*# sourceMappingURL=global-style.css.map */
