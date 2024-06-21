@@ -1,0 +1,17 @@
+@import "../header/_style.scss";
+
+.button-head {
+    padding: .5rem;
+
+    button {
+        padding: .5rem 7rem;
+        background:$button-backgroundcolor;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            opacity: .6;
+        }
+
+    }
+}

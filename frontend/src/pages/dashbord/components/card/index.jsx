@@ -1,7 +1,6 @@
 import React from "react";
 import "./_style.scss";
 import Grid from "../../../../assets/svg/Grid";
-
 import cardImg1 from "../../../../assets/images/video-editing5.jpg";
 const Card = () => {
   return (
