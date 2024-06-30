@@ -87,8 +87,26 @@
 }
 
 body {
+  width: 100vw;
+  overflow-x: hidden;
   background: var(--bg-1000);
   font-family: "Open Sans", sans-serif;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--secondaryHi);
+  border-radius: 0.2rem;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
 }
 
 h1,

@@ -11,6 +11,26 @@ body {
   overflow-x: hidden;
   background: var(--bg-1000);
   font-family: "Open Sans", sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--secondaryHi);
+    border-radius: 0.2rem;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+  }
 }
 
 h1,
